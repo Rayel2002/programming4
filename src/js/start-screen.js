@@ -1,6 +1,7 @@
 import * as ex from "excalibur";
 import { Game } from "./main.js";
 import { ResourceLoader, Resources } from "./resources.js";
+import { MainGame } from "./game-screen.js";
 
 export class StartScreen extends ex.Scene {
   constructor() {
@@ -33,8 +34,8 @@ export class StartScreen extends ex.Scene {
     if (engine.input.keyboard.wasPressed(ex.Input.Keys.Space)) {
       console.log("input");
 
-      const Level0 = new TutorialLevel();
-      engine.addScene("Game", Level0);
+      const mainGame = new MainGame();
+      engine.addScene("Game", mainGame);
       engine.goToScene("Game");
     }
   }
