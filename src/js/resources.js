@@ -1,9 +1,19 @@
 import { ImageSource, Sound, Resource, Loader } from 'excalibur'
-import fishImage from '../images/fish.png'
+import background from '../images/backgroundimage.jpg'
+import start from '../images/Press-Start.png'
 
 const Resources = {
-    Fish: new ImageSource(fishImage)
+    Background: new ImageSource(background),
+    Start: new ImageSource(start),
 }
-const ResourceLoader = new Loader([Resources.Fish])
 
-export { Resources, ResourceLoader }
+// met deze for loop hoef je niet alles handmatig in de loader te zetten
+const resourceArray = []
+for (const key in Resources) {
+    resourceArray.push(Resources[key])
+}
+
+
+const ResourceLoader = new Loader(resourceArray);
+// ResourceLoader.suppressPlayButton = true
+export { Resources, ResourceLoader };
