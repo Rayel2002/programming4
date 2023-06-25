@@ -4,6 +4,7 @@ import start from '../images/Press-Start.png'
 import player from '../images/playersprite.png'
 import gamebackground from '../images/background-3.webp'
 import Enemy1 from '../images/TyT86e.png'
+import reloadButton from "../images/realoadbutton.png";
 
 const Resources = {
     Background: new ImageSource(background),
@@ -11,6 +12,7 @@ const Resources = {
     Player: new ImageSource(player),
     GameBackground: new ImageSource(gamebackground),
     Enemy1 : new ImageSource(Enemy1),
+    reloadButton: new ImageSource(reloadButton),
 }
 
 // met deze for loop hoef je niet alles handmatig in de loader te zetten

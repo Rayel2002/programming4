@@ -11,14 +11,14 @@ export class GameOver extends Scene {
         super.onInitialize(_engine);
         this.button = new Actor({
             z: 100,
-            x: 700,
-            y: 520,
-            width: Resources.retryButton.width,
-            height: Resources.retryButton.height,
+            x: 400,
+            y: 300,
+            width: Resources.reloadButton.width,
+            height: Resources.reloadButton.height,
             collisionType: CollisionType.PreventCollision
         })
-        this.button.graphics.use(Resources.retryButton.toSprite())
-        this.button.actions.scaleTo(vec(3.5,3.5),vec(7,7))
+        this.button.graphics.use(Resources.reloadButton.toSprite())
+        this.button.actions.scaleTo(vec(0,1))
         this.button.on('pointerup', () => {
             location.reload();
         })
@@ -26,22 +26,22 @@ export class GameOver extends Scene {
     }
 
     onActivate(ctx) {
-        const Background = new ex.Actor({
+        const Background = new Actor({
             x: 0,
             y: 0,
           });
           Background.graphics.use(Resources.Background.toSprite());
           this.add(Background);
-        this.add(backgroundLoop);
+          Background.scale = new Vector(4, 4);
         if(ctx.data) {
             this.mylabel = new Label({
                 text: `Score: ${ctx.data.score}`,
-                pos: new Vector(630, 330),
+                pos: new Vector(100, 100),
                 font: new Font({
                     family: 'impact',
                     size: 40,
                     unit: FontUnit.Px,
-                    color:Color.White
+                    color:Color.Black
                 }),
             })
 

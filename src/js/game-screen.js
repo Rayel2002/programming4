@@ -70,7 +70,7 @@ export class MainGame extends Scene {
         if (this.lives <= 0){
             this.mylabel.kill()
             this.mylabel2.text = `You died`
-            this.engine.goToScene("gameover", { score: this.score })
+            this.engine.goToScene("GameOver", { score: this.score })
         }
     }
     updateScore(){
