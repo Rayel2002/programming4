@@ -1,16 +1,16 @@
 import { ImageSource, Sound, Resource, Loader } from 'excalibur'
 import background from '../images/backgroundimage.jpg'
 import start from '../images/Press-Start.png'
-import fish from '../images/miniplayerShark.png'
+import player from '../images/playersprite.png'
 import gamebackground from '../images/background-3.webp'
-import Barrier from '../images/Ickytentacle.png'
+import Enemy1 from '../images/TyT86e.png'
 
 const Resources = {
     Background: new ImageSource(background),
     Start: new ImageSource(start),
-    Fish: new ImageSource(fish),
+    Player: new ImageSource(player),
     GameBackground: new ImageSource(gamebackground),
-    Barrier : new ImageSource(Barrier),
+    Enemy1 : new ImageSource(Enemy1),
 }
 
 // met deze for loop hoef je niet alles handmatig in de loader te zetten

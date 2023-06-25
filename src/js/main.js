@@ -1,9 +1,9 @@
-import { Actor, Engine, Vector, Color } from "excalibur";
+import * as ex from "excalibur";
 import { Resources, ResourceLoader } from "./resources.js";
 import { StartScreen } from "./start-screen.js";
 
 
-export class Game extends Engine {
+export class Game extends ex.Engine {
   constructor() {
     super({ width: 800, height: 600 });
     this.start(ResourceLoader).then(() => this.startGame());
