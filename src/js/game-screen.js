@@ -86,7 +86,7 @@ export class MainGame extends Scene {
             this.i++,
         )
         this.add(enemy1)
-        if (this.engine.currentScene.i){
+        if (this.engine.currentScene.i === 5){
             const enemy2 = new Enemy2(
                 engine.random.integer(0, 700),
                 engine.random.integer(0, 1399),
