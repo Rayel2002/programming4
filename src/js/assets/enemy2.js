@@ -3,7 +3,11 @@ import { ResourceLoader, Resources } from "../resources.js";
 import { MainGame } from "../game-screen.js";
 import { Enemy1 } from "../assets/enemy1.js";
 
+function getRandomNum(min, max) {
+    return Math.random() * (max - min);
+}
 export class Enemy2 extends Enemy1 {
+  score;
   constructor() {
     super({ width: Resources.Enemy1.width, height: Resources.Enemy1.height });
   }
@@ -21,7 +25,10 @@ export class Enemy2 extends Enemy1 {
     this.scale = new ex.Vector(0.55, 0.55);
     this.pos = new ex.Vector(600, 200);
     this.vel = new ex.Vector(-180, 0);
-    console.log(this.pos);
+    this.on("exitviewport", (event) => this.exitView());
   }
-  score;
+  exitView(event) {
+    this.engine.currentScene.updateLives();
+    this.kill();
+  }
 }

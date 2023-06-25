@@ -14,17 +14,17 @@ export class Player extends ex.Actor {
         this.pos = new ex.Vector(200, 350)
         this.vel = new ex.Vector(0, 0)
         this.scale = new ex.Vector(0.5, 0.5)
-        // this.on('collisionstart', (event) => this.hitSomething(event))
+        this.on('collisionstart', (event) => this.hitSomething(event))
     }
 
     
-    // hitSomething(event)
-    // {event.Player.kill();
-    //     this.engine.currentScene.updateScore()
-    // }
+    hitSomething(event)
+    {event.other.kill();
+        this.engine.currentScene.updateScore()
+    }
 
     // zorgt ervoor dat de speler kan bewegen
-    onPreUpdate(engine) {
+    onPreUpdate(engine, _delta) {
         let xspeed = 0
         let yspeed = 0
         if (engine.input.keyboard.isHeld(ex.Input.Keys.W) || engine.input.keyboard.isHeld(ex.Input.Keys.Up)) {yspeed = -150}
