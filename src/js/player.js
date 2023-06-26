@@ -1,6 +1,6 @@
 import {Actor, Vector, Input, Engine} from "excalibur";
-import {ResourceLoader, Resources} from "../resources.js";
-import {Enemy1} from "../assets/enemy1.js";
+import {ResourceLoader, Resources} from "./";
+import {Enemy1} from "./enemy1.js";
 
 // zorgt ervoor dat de speler kan schieten
 export class Player extends Actor {

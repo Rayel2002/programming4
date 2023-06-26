@@ -1,7 +1,7 @@
 import * as ex from "excalibur";
-import { ResourceLoader, Resources } from "../resources.js";
-import { MainGame } from "../game-screen.js";
-import { Enemy1 } from "../assets/enemy1.js";
+import { ResourceLoader, Resources } from "./resources.js";
+import { MainGame } from "./game-screen.js";
+import { Enemy1 } from "./enemy1.js";
 
 // genereerd een random nummer voor de spawner
 function getRandomNum(min, max) {

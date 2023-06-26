@@ -1,5 +1,5 @@
 import * as ex from "excalibur";
-import {ResourceLoader, Resources } from "../resources.js";
+import {ResourceLoader, Resources } from "./resources.js";
 
 // genereerd een random nummer voor de spawner
 function getRandomNum(min, max) {
