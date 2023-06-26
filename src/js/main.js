@@ -1,4 +1,4 @@
-import {Actor, Engine, Input, Random, Vector, } from "excalibur"
+import { Actor, Engine, Input, Random, Vector, } from "excalibur"
 import { Resources, ResourceLoader } from "./resources.js";
 import { StartScreen } from "./start-screen.js";
 import { MainGame } from "./game-screen.js";
