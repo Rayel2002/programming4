@@ -71,7 +71,7 @@ export class MainGame extends Scene {
         this.add(this.mylabel2)
     }
 
-    // update de score en levens
+    // update de score
     updateLives(){
         this.lives--
         this.mylabel2.text = `Lives: ${this.lives}`
@@ -81,6 +81,7 @@ export class MainGame extends Scene {
             this.engine.goToScene("GameOver", { score: this.score })
         }
     }
+    // update de score
     updateScore(){
         this.score++
         this.mylabel.text = `Score: ${this.score}`
