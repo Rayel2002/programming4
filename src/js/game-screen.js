@@ -1,10 +1,10 @@
 import { Resources, ResourceLoader } from "./resources.js";
 import {Actor, Engine, Random, Timer, Vector, Label, Color, Font, FontUnit, Scene, Class, } from "excalibur";
 import { StartScreen } from "./start-screen.js";
-import { Player } from "./assets/player.js";
-import { GameBackground } from "../js/assets/game-background.js";
-import { Enemy1 } from "./assets/enemy1.js";
-import { Enemy2 } from "./assets/enemy2.js";
+import { Player } from "./player.js";
+import { GameBackground } from "./game-background.js";
+import { Enemy1 } from "./enemy1.js";
+import { Enemy2 } from "./enemy2.js";
 
 export class MainGame extends Scene {
     constructor() {
