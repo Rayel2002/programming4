@@ -3,7 +3,7 @@ import background from '../images/backgroundimage.jpg'
 import start from '../images/Press-Start.png'
 import player from '../images/playersprite.png'
 import gamebackground from '../images/background-3.webp'
-import Enemy1 from '../images/TyT86e.png'
+import villain from '../images/TyT86e.png'
 import reloadButton from "../images/realoadbutton.png";
 
 const Resources = {
@@ -11,7 +11,7 @@ const Resources = {
     Start: new ImageSource(start),
     Player: new ImageSource(player),
     GameBackground: new ImageSource(gamebackground),
-    Enemy1 : new ImageSource(Enemy1),
+    Enemy1 : new ImageSource(villain),
     reloadButton: new ImageSource(reloadButton),
 }
 
