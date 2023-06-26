@@ -1,5 +1,6 @@
 import {Actor, Vector, Input, Engine} from "excalibur";
 import {ResourceLoader, Resources} from "../resources.js";
+import {Enemy1} from "../assets/enemy1.js";
 
 // zorgt ervoor dat de speler kan schieten
 export class Player extends Actor {
@@ -17,10 +18,11 @@ export class Player extends Actor {
         this.on('collisionstart', (event) => this.hitSomething(event))
     }
 
-    
-    hitSomething(event)
-    {event.other.kill();
-        this.engine.currentScene.updateScore()
+    // zorgt ervoor dat de levens verliest als deze Enemy1 raakt
+    hitSomething(event){
+        if (event.other instanceof Enemy1) {
+            this.engine.currentScene.updateLives()
+        }
     }
 
     // zorgt ervoor dat de speler kan bewegen

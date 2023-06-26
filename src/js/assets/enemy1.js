@@ -17,12 +17,5 @@ export class Enemy1 extends ex.Actor {
     this.pos = new ex.Vector(600, 300)
     this.vel = new ex.Vector(-180, 0)
     this.scale = new ex.Vector(0.5, 0.5)
-    this.on("exitviewport", (event) => this.exitView())
   }
-
-  exitView(event){
-    this.engine.currentScene.updateLives();
-    this.kill()
-}
-
 }

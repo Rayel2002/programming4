@@ -19,6 +19,7 @@ export class MainGame extends Scene {
     mylabel2
 
     onInitialize(Engine) {
+        //timer voor de spawner
         this.game = Engine
         this.timer = new Timer({
             fcn: () => this.spawn(Engine),
@@ -30,21 +31,26 @@ export class MainGame extends Scene {
 
     }
 
-
     onActivate(ctx) {
-
+    // voegt de achtergrond toe
         const background = new GameBackground();
         this.add(background);
+
+    // voegt de speler toe
         const player = new Player();
         this.add(player);
+
+        //voegt de score en levens toe
         this.score = 0
         this.i = 0
         this.lives = 3
+
+        //voegt de score en levens toe aan het canvas
         this.mylabel = new Label({
             text: `Score: ${this.score}`,
             pos: new Vector(100, 100),
             font: new Font({
-                family: 'impact',
+                family: 'Invasion2000',
                 size: 40,
                 unit: FontUnit.Px,
                 color:Color.White
@@ -56,7 +62,7 @@ export class MainGame extends Scene {
             text: `Lives: ${this.lives}`,
             pos: new Vector(100, 150),
             font: new Font({
-                family: 'impact',
+                family: 'Invasion2000',
                 size: 40,
                 unit: FontUnit.Px,
                 color:Color.White
@@ -64,6 +70,8 @@ export class MainGame extends Scene {
         })
         this.add(this.mylabel2)
     }
+
+    // update de score en levens
     updateLives(){
         this.lives--
         this.mylabel2.text = `Lives: ${this.lives}`
@@ -78,6 +86,7 @@ export class MainGame extends Scene {
         this.mylabel.text = `Score: ${this.score}`
     }
 
+    // spawn de enemies
     spawn(engine) {
 
         const enemy1 = new Enemy1(

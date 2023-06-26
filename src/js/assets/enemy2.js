@@ -4,7 +4,7 @@ import { MainGame } from "../game-screen.js";
 import { Enemy1 } from "../assets/enemy1.js";
 
 function getRandomNum(min, max) {
-    return Math.random() * (max - min);
+  return Math.random() * (max - min);
 }
 export class Enemy2 extends Enemy1 {
   score;
@@ -25,10 +25,5 @@ export class Enemy2 extends Enemy1 {
     this.scale = new ex.Vector(0.55, 0.55);
     this.pos = new ex.Vector(600, 200);
     this.vel = new ex.Vector(-180, 0);
-    this.on("exitviewport", (event) => this.exitView());
-  }
-  exitView(event) {
-    this.engine.currentScene.updateLives();
-    this.kill();
   }
 }
